@@ -47,10 +47,10 @@ Relying on the provided files, write a chat program, based on two C programs usi
 Write a program in the language of your chosing, that consist of two files, a publisher and a suscriber. The publisher, as the word describes it, it will publish a message read from the keyboard. The suscriber, will run endlessly showing all messages. You will have to chose between using Google Pub/Sub, Amazon SQS or a local Redis. All of those tools are well documented and heavily used in the industry. If you want to go one step beyond you can integrate Amazon SNS and Amazon SQS.
 
 Here are some reference links:
-https://cloud.google.com/pubsub/
-https://aws.amazon.com/sqs/
-https://redis.io/topics/pubsub
-https://aws.amazon.com/sns/
+- https://cloud.google.com/pubsub/
+- https://aws.amazon.com/sqs/
+- https://redis.io/topics/pubsub
+- https://aws.amazon.com/sns/
 
 The differences are:
 - For Google Cloud, you need to create an account, it's free, and create the topic and suscriber for it to work.
