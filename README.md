@@ -15,7 +15,7 @@ Install links for VirtualBox:
 
 ## Excercise 2
 
-Run a syscall analysis on the echo and ls command and a Hello World C Program and write down a description of the system calls that are being called. You have to add another command to analyze as well. The description should be in-depth and not superficial, google the syscall that you don't know and try to infer from the parameters what are they doin and if they are used in the same order in all of the executions.
+Run a syscall analysis on the `echo`, `ls` command and a Hello World C Program and write down a description of the system calls that are being called. You have to add another command (e.g., `ping -c 1 8.8.8.8`) to analyze as well. The description should be in-depth and not superficial, google the syscall that you don't know and try to infer from the parameters what are they doin and if they are used in the same order in all of the executions.
 
 All necessary files are located in the `ex2` folder.
 
