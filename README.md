@@ -23,12 +23,14 @@ Strace manpage:
 http://manpages.ubuntu.com/manpages/bionic/man1/strace.1.html
 
 ```bash
-docker build -t lab1_ex2 ./ex2
+# This are examples for the echo command
 docker run --rm -ti lab1_ex2 strace echo "Hello"
 docker run --rm -ti lab1_ex2 strace -e trace=read echo "Hello"
 ```
 
 ```bash
+# This is how to run a docker to run the strace in the hello command
+docker build -t lab1_ex2 ./ex2
 docker run --rm -ti -v $(pwd)/ex2/:/home/test lab1_ex2 /bin/bash -c "cd /home/test; gcc -o hello hello.c; strace ./hello"
 ```
 
