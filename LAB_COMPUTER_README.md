@@ -2,19 +2,6 @@
 
 ## Excercise 1
 
-Install VirtualBox or Docker to run the following exercises. You can run the commands in your own computer at your own risk.
-
-Install links for Docker:
-- https://docs.docker.com/install/linux/docker-ce/ubuntu/
-- https://docs.docker.com/docker-for-windows/install/
-- https://docs.docker.com/docker-for-mac/install/
-
-Install links for VirtualBox:
-- https://www.virtualbox.org/wiki/Downloads
-- https://ubuntu.com/download/server
-
-## Excercise 2
-
 Run a syscall analysis on the echo and ls command and a Hello World C Program and write down a description of the system calls that are being called. You have to add another command to analyze as well. The description should be in-depth and not superficial, google the syscall that you don't know and try to infer from the parameters what are they doin and if they are used in the same order in all of the executions.
 
 All necessary files are located in the `ex2` folder.
@@ -23,21 +10,13 @@ Strace manpage:
 http://manpages.ubuntu.com/manpages/bionic/man1/strace.1.html
 
 ```bash
-docker build -t lab1_ex2 ./ex2
-docker run --rm -ti lab1_ex2 strace echo "Hello"
-docker run --rm -ti lab1_ex2 strace -e trace=read echo "Hello"
+strace echo "Hello"
+strace -e trace=read echo "Hello"
 ```
 
 ```bash
-docker run --rm -ti -v $(pwd)/ex2/:/home/test lab1_ex2 /bin/bash -c "cd /home/test; gcc -o hello hello.c; strace ./hello"
-```
-
-#### Bonus (in the name of knowledge)
-
-Write a Dockerfile that removes the need to attach a volume and compile the file in that line, so that you can only do:
-
-```bash
-docker run --rm -ti lab1_ex2 strace ./root/hello
+gcc -o hello hello.c
+strace ./hello
 ```
 
 ## Excercise 3
@@ -47,6 +26,8 @@ Relying on the provided files, write a chat program, based on two C programs usi
 All necessary files are located in the `ex3` folder.
 
 ## Excercise 4
+
+To be completed on your personal computer, since it needs to install some packages which are not allowed in the lab computers. If you have any problems with this you can email me to find a solution.
 
 Write a program in the language of your chosing, that consist of two files, a publisher and a suscriber. The publisher, as the word describes it, it will publish a message read from the keyboard. The suscriber, will run endlessly showing all messages. You will have to chose between using Google Pub/Sub, Amazon SQS or a local Redis. All of those tools are well documented and heavily used in the industry. If you want to go one step beyond you can integrate Amazon SNS and Amazon SQS.
 
