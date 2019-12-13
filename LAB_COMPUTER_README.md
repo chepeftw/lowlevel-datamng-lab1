@@ -19,13 +19,13 @@ gcc -o hello hello.c
 strace ./hello
 ```
 
-## Excercise 3
+## Excercise 2
 
 Relying on the provided files, write a chat program, based on two C programs using shared memory (not pipes, nor fifo). You can safely assume that the messages won't be long, between 1024 and 4096 bytes is more than enough. You can also assume that only one person will chat at the same time, meaning that only one of the two users can send text at the same time, this does not mean that that one user is limited to one message. This means that, user1 writes and he could write again multiple times, after user2 can reply with one or more messages.
 
 All necessary files are located in the `ex3` folder.
 
-## Excercise 4
+## Excercise 3
 
 To be completed on your personal computer, since it needs to install some packages which are not allowed in the lab computers. If you have any problems with this you can email me to find a solution.
 
