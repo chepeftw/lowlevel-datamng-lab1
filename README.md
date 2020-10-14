@@ -5,11 +5,13 @@
 Install VirtualBox or Docker to run the following exercises. You can run the commands in your own computer at your own risk.
 
 Install links for Docker:
+
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 - https://docs.docker.com/docker-for-windows/install/
 - https://docs.docker.com/docker-for-mac/install/
 
 Install links for VirtualBox:
+
 - https://www.virtualbox.org/wiki/Downloads
 - https://ubuntu.com/download/server
 
@@ -17,7 +19,11 @@ Install links for VirtualBox:
 
 Run a syscall analysis on the `echo`, `ls` command and a Hello World C Program and write down a description of the system calls that are being called. You have to add another command (e.g., `ping -c 1 8.8.8.8`) to analyze as well. The description should be in-depth and not superficial, google the syscall that you don't know and try to infer from the parameters what are they doin and if they are used in the same order in all of the executions.
 
-All necessary files are located in the `ex2` folder.
+All necessary files are located in the `ex2` folder. To start do:
+```bash
+cd ex2
+docker build -t lab1_ex2 .
+```
 
 Strace manpage:
 http://manpages.ubuntu.com/manpages/bionic/man1/strace.1.html
@@ -30,8 +36,7 @@ docker run --rm -ti lab1_ex2 strace -e trace=read echo "Hello"
 
 ```bash
 # This is how to run a docker to run the strace in the hello command
-docker build -t lab1_ex2 ./ex2
-docker run --rm -ti -v $(pwd)/ex2/:/home/test lab1_ex2 /bin/bash -c "cd /home/test; gcc -o hello hello.c; strace ./hello"
+docker run --rm -ti -v $(pwd)/:/home/test lab1_ex2 /bin/bash -c "cd /home/test; gcc -o hello hello.c; strace ./hello"
 ```
 
 #### Bonus (in the name of knowledge)

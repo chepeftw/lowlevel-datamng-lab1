@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <unistd.h>
+#include <time.h>
 
 int main() {
     /* the size (in bytes) of shared memory object */
@@ -26,12 +27,20 @@ int main() {
 
     /* memory map the shared memory object */
     ptr = mmap(0, SIZE, PROT_WRITE, MAP_SHARED, shm_fd, 0);
+    printf("Timestamp: %d\n", (int) time(NULL));
+    sleep(1);
+    printf("Timestamp: %d\n", (int) time(NULL));
+    sleep(1);
+    printf("Timestamp: %d\n", (int) time(NULL));
+    sleep(1);
+    printf("Timestamp: %d\n", (int) time(NULL));
 
     /* write to the shared memory object */
     sprintf(ptr, "%s ", message_0);
     ptr += strlen(message_0);
     sprintf(ptr, "%s ", message_1);
     ptr += strlen(message_1);
+    printf("%s - \n", (char *) ptr);
 
     return 0;
 }
