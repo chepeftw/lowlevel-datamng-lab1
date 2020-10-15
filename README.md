@@ -1,5 +1,14 @@
 # Laboratory 1
 
+## Deliverable
+
+A zip file containing:
+
+- A txt file with your choice and short description of your experience of Ex1
+- A txt file with the descriptions for Ex2
+- The code for ex3 in a folder called "ex3"
+- The code for ex4 in a folder called "ex4"
+
 ## Excercise 1
 
 Install VirtualBox or Docker to run the following exercises. You can run the commands in your own computer at your own risk.
