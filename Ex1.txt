@@ -1,0 +1,21 @@
+Lab1 - Ex1
+
+//Rilwanu Ar Roiyyaan Kasno
+//M1 EECIP - Electrical and Optronics Engienering Track
+//Institut Polytechnique de Paris
+
+-CHOICE:
+Docker
+
+-REASON:
+The reason behind choosing Docker over virtualBox is because I have heard more about docker and its broad and recently famous application and usage, regardless the fact that I never work with it previously. 
+
+-EXPERIENCE:
+>idea
+It is quite tricky when the first time I tried to grasp about what docker actually is and how it works as I struggled to distinguish the detailed technical difference between docker (and its environment, i.e. container, deployment, etc) and virtual machine. Once the great idea behind Docker was finally understood, I proceeded with the installation with fun and excited on windows 10 home. 
+
+>installation 
+The installation process is quite straightforward as the tutorial provided by Docker is easy to follow and implement. 
+
+>first action
+installing first image and creating several containers made my understanding of Docker even more clear and with this practical work, the future idea of utilizing docker is in mind. 
